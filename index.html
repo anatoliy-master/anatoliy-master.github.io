@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вельмисов Сергей Анатольевич — стройка, сварка, ландшафт | Сергиев Посад</title>
+    <meta name="description" content="Строительство, сварочные работы, ландшафтный дизайн в Сергиевом Посаде. Заборы, навесы, беседки, фундаменты. Опыт более 10 лет. Звоните: +7 (916) 226-43-13">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #1a5276;
+            color: white;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .logo {
+            font-size: 1.3em;
+            font-weight: 700;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.95em;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+
+        nav a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .header-phone {
+            color: #f9e79f;
+            font-weight: 700;
+            font-size: 1.1em;
+            text-decoration: none;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1a5276 0%, #2980b9 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+        }
+
+        .hero .slogan {
+            font-size: 1.3em;
+            opacity: 0.9;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .hero .location {
+            font-size: 1.05em;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background: #f39c12;
+            color: white;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.15em;
+            font-weight: 700;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .hero-btn:hover {
+            background: #e67e22;
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1a5276;
+            font-size: 1.8em;
+            margin-bottom: 40px;
+        }
+
+        .services {
+            background: #f8f9fa;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-top: 4px solid #2980b9;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #1a5276;
+            margin-bottom: 8px;
+            font-size: 1.15em;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .works {
+            background: #f8f9fa;
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .work-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .work-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: #ddd;
+        }
+
+        .work-card h3 {
+            padding: 20px;
+            color: #1a5276;
+            font-size: 1.1em;
+        }
+
+        .contacts {
+            background: #1a5276;
+            color: white;
+        }
+
+        .contacts h2 {
+            color: white;
+        }
+
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            text-align: center;
+        }
+
+        .contact-item .icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .contact-item h3 {
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .contact-item a {
+            color: #f9e79f;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-item p {
+            opacity: 0.8;
+            font-size: 0.95em;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .cta h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            font-size: 1.15em;
+            margin-bottom: 25px;
+            opacity: 0.95;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: white;
+            color: #e67e22;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 700;
+            transition: transform 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: #111;
+            color: #888;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.6em;
+            }
+
+            .hero .slogan {
+                font-size: 1.1em;
+            }
+
+            nav a {
+                margin-left: 10px;
+                font-size: 0.85em;
+            }
+
+            .logo {
+                font-size: 1.1em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">🔨 Вельмисов С.А.</div>
+            <nav>
+                <a href="#services">Услуги</a>
+                <a href="#about">Обо мне</a>
+                <a href="#works">Работы</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+            <a href="tel:+79162264313" class="header-phone">📞 +7 (916) 226-43-13</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Здравствуйте, меня зовут Анатолий.<br>Делаю всё: от забора до ландшафта.</h1>
+        <p class="slogan">«Строю, свариваю, облагораживаю»</p>
+        <p class="location">📍 Сергиево-Посадский район и Московская область</p>
+        <a href="tel:+79162264313" class="hero-btn"> Позвонить — консультация бесплатно</a>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Чем могу помочь</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚧</div>
+                    <h3>Заборы и ограждения</h3>
+                    <p>Из металлопрофиля, дерева, сварные. Любая сложность.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Навесы и козырьки</h3>
+                    <p>Надёжные конструкции для автомобиля, крыльца, террасы.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏡</div>
+                    <h3>Беседки</h3>
+                    <p>Уютные беседки для отдыха на вашем участке.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧱</div>
+                    <h3>Фундаменты</h3>
+                    <p>Ленточные, свайные, плитные — под любой объект.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👣</div>
+                    <h3>Дорожки и площадки</h3>
+                    <p>Садовые дорожки, парковки, отмостки.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Сварочные работы</h3>
+                    <p>Ворота, лестницы, мангалы, ремонт металлоконструкций.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2>Обо мне</h2>
+            <div class="about-content">
+                <p><strong>Вельмисов Сергей Анатольевич</strong></p>
+                <br>
+                <p>Более 10 лет занимаюсь строительством, сваркой и благоустройством участков в Сергиево-Посадском районе. Работаю качественно, как для себя. Каждый проект — индивидуальный подход.</p>
+                <br>
+                <p>Звоните — расскажу подробнее и подскажу лучшее решение для вашей задачи.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Звоните — обсудим ваш проект!</h2>
+        <p>Консультация бесплатно. Без навязывания и лишних слов.</p>
+        <a href="tel:+79162264313" class="cta-btn">📞 +7 (916) 226-43-13</a>
+    </section>
+
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <h2>Контакты</h2>
+            <div class="contacts-grid">
+                <div class="contact-item">
+                    <div class="icon">📞</div>
+                    <h3>Телефон</h3>
+                    <a href="tel:+79162264313">+7 (916) 226-43-13</a>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <a href="https://wa.me/79162264313">Написать в WhatsApp</a>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">💬</div>
+                    <h3>MAX</h3>
+                    <p style="color: #f9e79f; font-size: 1.2em;">+7 (916) 226-43-13</p>
+                    <small>(Напишите в MAX на этот номер)</small>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">🕐</div>
+                    <h3>Время работы</h3>
+                    <p>Ежедневно с 9:00 до 21:00</p>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">📍</div>
+                    <h3>Где работаю</h3>
+                    <p>Сергиево-Посадский район,<br>Московская область</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Вельмисов Сергей Анатольевич — стройка, сварка, ландшафт. Сергиев Посад.</p>
+    </footer>
+
+</body>
+</html>
