@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sergey-master-sp.github.io/sitemap.xml
